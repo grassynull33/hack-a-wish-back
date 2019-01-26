@@ -1,7 +1,7 @@
-const resources = require('./routes/resources');
+const child = require('./routes/child');
 
 module.exports = app => {
-  app.use('/apis/resources', resources);
+  app.use('/apis/child', child);
 
   // If error is passed from next(error)
   // eslint-disable-next-line no-unused-vars
