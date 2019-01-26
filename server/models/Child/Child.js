@@ -13,6 +13,7 @@ const childSchema = new Schema({
   condition: { type: String, required: true, trim: true },
   story: { type: String, trim: true },
   interests: [{ type: String, trim: true }],
+  wish: { type: String, trim: true, required: true},
   createdAt: {
     type: Date,
   },
