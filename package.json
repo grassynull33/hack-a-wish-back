@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel-node": "babel-node --presets=env",
+    "dev": "NODE_ENV=development nodemon ./server/server.js",
+    "start": "node ./server/server.js",
+    "lint": "node_modules/.bin/esw --ignore-pattern internals/scripts server",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
