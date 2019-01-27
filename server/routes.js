@@ -1,7 +1,13 @@
+const path = require('path');
 const child = require('./routes/child');
 
 module.exports = app => {
   app.use('/apis/child', child);
+
+  // eslint-disable-next-line no-unused-vars
+  app.use((req, res, next) =>
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
+  );
 
   // If error is passed from next(error)
   // eslint-disable-next-line no-unused-vars
