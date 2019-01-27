@@ -45,7 +45,7 @@ app.use(logger('dev'));
 //* ****// Initialize Routes
 /** *********************************** */
 app.use(express.static(path.resolve(__dirname, 'public')));
-app.get('/', (req, res) => res.status(200).end());
+// app.get('/', (req, res) => res.status(200).end());
 
 require('./routes')(app);
 
