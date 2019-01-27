@@ -14,7 +14,7 @@ const childSchema = new Schema({
   story: { type: String, trim: true },
   interests: [{ type: String, trim: true }],
   wish: { type: String, trim: true, required: true },
-  amountDonatedByUser: { type: Number, min: 0, required: true },
+  amountDonatedByUser: { type: Number, min: 0, default: 0 },
   amountDonatedByOthers: { type: Number, min: 0, required: true },
   amountToCompletion: { type: Number, min: 0, required: true },
   createdAt: {
